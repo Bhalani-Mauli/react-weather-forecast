@@ -1,7 +1,12 @@
 import { Dashboard } from "./pages";
+import { Theme } from "./utils";
 
 function App() {
-  return <Dashboard />;
+  return (
+    <Theme>
+      <Dashboard />
+    </Theme>
+  );
 }
 
 export default App;
