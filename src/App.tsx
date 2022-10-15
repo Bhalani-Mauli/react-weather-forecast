@@ -1,9 +1,7 @@
+import { Dashboard } from "./pages";
+
 function App() {
-  return (
-    <div>
-      <h1>Weather app</h1>
-    </div>
-  );
+  return <Dashboard />;
 }
 
 export default App;
