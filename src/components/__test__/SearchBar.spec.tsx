@@ -1,4 +1,5 @@
-import { fireEvent, render } from "@testing-library/react";
+import { fireEvent } from "@testing-library/react";
+import { render } from "../../utils/test-utils";
 import SearchBar from "../SearchBar";
 
 describe("SearchBar", () => {
