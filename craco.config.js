@@ -11,10 +11,8 @@ const alias = aliasesFn("./src");
 
 const resolvedAliases = Object.fromEntries(
   Object.entries(alias).map(([key, value]) => [
-    Object.entries(alias).map(([key, value]) => [
-      key,
-      path.resolve(__dirname, value),
-    ]),
+    key,
+    path.resolve(__dirname, value),
   ])
 );
 
