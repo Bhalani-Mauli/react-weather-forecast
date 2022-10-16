@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 
 import { FlxRow } from "..";
-import Button from "../Button/Button";
+import Button from "@components/Button/Button";
 import { Container, Input, StyledSearchIcon } from "./SearchBar.styles";
 
 function SearchBar() {

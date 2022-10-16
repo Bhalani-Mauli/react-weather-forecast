@@ -1,5 +1,5 @@
 import App from "./App";
-import { render } from "./utils/test-utils";
+import { render } from "@utils/test-utils";
 
 describe("App", () => {
   it("renders the component", () => {

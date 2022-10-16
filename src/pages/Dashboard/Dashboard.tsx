@@ -1,4 +1,4 @@
-import { SearchBar } from "../../components";
+import { SearchBar } from "@components/index";
 import { ContentWrapper, Title, Main } from "./Dashboard.styles";
 
 function Dashboard() {

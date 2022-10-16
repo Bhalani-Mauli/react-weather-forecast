@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { devices } from "../../utils";
+import { devices } from "@utils/index";
 
 export const Title = styled.h1`
   margin-top: 40px;
