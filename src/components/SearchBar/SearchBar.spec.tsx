@@ -1,6 +1,6 @@
 import { fireEvent } from "@testing-library/react";
 import { render } from "../../utils/test-utils";
-import SearchBar from "../SearchBar";
+import SearchBar from "./SearchBar";
 
 describe("SearchBar", () => {
   it("should have input on the screen", () => {
@@ -13,5 +13,10 @@ describe("SearchBar", () => {
     const input = getByTestId("search-bar") as HTMLInputElement;
     fireEvent.change(input, { target: { value: "test" } });
     expect(input.value).toBe("test");
+  });
+  it("should have button on the screen", () => {
+    const { getByText } = render(<SearchBar />);
+    const button = getByText("Search");
+    expect(button).toBeInTheDocument();
   });
 });
