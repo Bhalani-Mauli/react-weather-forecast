@@ -1,12 +1,4 @@
-import {
-  FaCloudSun,
-  FaThermometerHalf,
-  FaTint,
-  FaWind,
-  FaRegClock,
-  FaAngleRight,
-  FaAngleLeft,
-} from "react-icons/fa";
+import { FaTint, FaWind, FaRegClock } from "react-icons/fa";
 import { TbGauge, TbSunrise, TbSunset } from "react-icons/tb";
 import { IconWithText } from "./components/IconWithText";
 import { WeatherDataField } from "./components/WeatherDataField";

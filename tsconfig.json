@@ -23,5 +23,5 @@
       "@pages/*": ["pages/*"]
     }
   },
-  "include": ["src"]
+  "include": ["src", "./src/types/**/*"]
 }

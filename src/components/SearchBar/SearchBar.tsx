@@ -5,7 +5,11 @@ import { FlxRow } from "..";
 import Button from "@components/Button/Button";
 import { Container, Input, StyledSearchIcon } from "./SearchBar.styles";
 
-function SearchBar() {
+interface PropTypes {
+  onSearchHandler: (city: string) => void;
+}
+
+function SearchBar({ onSearchHandler }: PropTypes) {
   const [searchInput, setSearchInput] = useState<string>("");
   return (
     <FlxRow>
@@ -20,7 +24,9 @@ function SearchBar() {
           placeholder="search"
         />
       </Container>
-      <StyledButton>Search</StyledButton>
+      <StyledButton onClick={() => onSearchHandler(searchInput)}>
+        Search
+      </StyledButton>
     </FlxRow>
   );
 }

@@ -1,0 +1,4 @@
+export const types = {
+  GET_WEATHER_DATA: "GET_WEATHER_DATA",
+  GET_WEATHER_ERROR: "GET_WEATHER_ERROR",
+};
