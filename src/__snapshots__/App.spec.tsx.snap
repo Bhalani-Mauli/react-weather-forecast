@@ -3,13 +3,13 @@
 exports[`App renders the component 1`] = `
 <DocumentFragment>
   <div
-    class="sc-ftTHYK iVLuCC"
+    class="sc-fLcnxK hBZzsm"
   >
     <div
-      class="sc-pyfCe Oiesw"
+      class="sc-bBABsx lfTeCV"
     >
       <h1
-        class="sc-iBYQkv csvTxx"
+        class="sc-kgTSHT fhdxBo"
       >
         React Weather App
       </h1>
@@ -45,6 +45,646 @@ exports[`App renders the component 1`] = `
         >
           Search
         </button>
+      </div>
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 256 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"
+        />
+      </svg>
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 256 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+        />
+      </svg>
+      <div
+        class="sc-bqWxrE dEgfGO"
+      >
+        <div
+          class="sc-ksBlkl eRmPFz"
+        >
+          <div
+            class="sc-jSUZER sc-hBxehG dRMZHh fgIymA"
+          >
+            <svg
+              class="sc-fnGiBr clqWEB"
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 384 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+              />
+            </svg>
+            <div>
+              Ahmedabad,India
+              <div
+                class="sc-fEXmlR klidXK"
+              >
+                12.10.2022
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-gKPRtg sc-idXgbr cyMLoJ jkishJ"
+          >
+            <span
+              class="sc-hHTYSt hMoeKa"
+            >
+              20
+              <sup
+                class="sc-dIfARi haiCVl"
+              >
+                °C
+              </sup>
+            </span>
+            <div
+              class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+            >
+              <img
+                class="sc-dmctIk bjmnUo"
+                src="http://openweathermap.org/img/wn/01n@2x.png"
+              />
+              <div
+                class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+              />
+              <div
+                class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+              >
+                Cloudy 
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-jSUZER sc-bjfHbI dRMZHh ECSOR"
+          >
+            <div
+              class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+            >
+              <svg
+                fill="currentColor"
+                height="12"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M156.7 256H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h142.2c15.9 0 30.8 10.9 33.4 26.6 3.3 20-12.1 37.4-31.6 37.4-14.1 0-26.1-9.2-30.4-21.9-2.1-6.3-8.6-10.1-15.2-10.1H81.6c-9.8 0-17.7 8.8-15.9 18.4 8.6 44.1 47.6 77.6 94.2 77.6 57.1 0 102.7-50.1 95.2-108.6C249 291 205.4 256 156.7 256zM16 224h336c59.7 0 106.8-54.8 93.8-116.7-7.6-36.2-36.9-65.5-73.1-73.1-55.4-11.6-105.1 24.9-114.9 75.5-1.9 9.6 6.1 18.3 15.8 18.3h32.8c6.7 0 13.1-3.8 15.2-10.1C325.9 105.2 337.9 96 352 96c19.4 0 34.9 17.4 31.6 37.4-2.6 15.7-17.4 26.6-33.4 26.6H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16zm384 32H243.7c19.3 16.6 33.2 38.8 39.8 64H400c26.5 0 48 21.5 48 48s-21.5 48-48 48c-17.9 0-33.3-9.9-41.6-24.4-2.9-5-8.7-7.6-14.5-7.6h-33.8c-10.9 0-19 10.8-15.3 21.1 17.8 50.6 70.5 84.8 129.4 72.3 41.2-8.7 75.1-41.6 84.7-82.7C526 321.5 470.5 256 400 256z"
+                />
+              </svg>
+              <div
+                class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+              />
+              <div
+                class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+              >
+                22 
+                <div
+                  class="sc-jSUZER sc-pyfCe dRMZHh cbTTQz"
+                >
+                  km/h
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+            >
+              <svg
+                fill="currentColor"
+                height="12"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 352 512"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M205.22 22.09c-7.94-28.78-49.44-30.12-58.44 0C100.01 179.85 0 222.72 0 333.91 0 432.35 78.72 512 176 512s176-79.65 176-178.09c0-111.75-99.79-153.34-146.78-311.82zM176 448c-61.75 0-112-50.25-112-112 0-8.84 7.16-16 16-16s16 7.16 16 16c0 44.11 35.89 80 80 80 8.84 0 16 7.16 16 16s-7.16 16-16 16z"
+                />
+              </svg>
+              <div
+                class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+              />
+              <div
+                class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+              >
+                22 
+                <div
+                  class="sc-jSUZER sc-pyfCe dRMZHh cbTTQz"
+                >
+                  km/h
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+            >
+              <svg
+                fill="none"
+                height="12"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <desc />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="9"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="1"
+                />
+                <line
+                  x1="13.41"
+                  x2="16"
+                  y1="10.59"
+                  y2="8"
+                />
+                <path
+                  d="M7 12a5 5 0 0 1 5 -5"
+                />
+              </svg>
+              <div
+                class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+              />
+              <div
+                class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+              >
+                1012 
+                <div
+                  class="sc-jSUZER sc-pyfCe dRMZHh cbTTQz"
+                >
+                  hPa
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-jSUZER sc-bjfHbI dRMZHh ECSOR"
+          >
+            <div
+              class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+            >
+              <svg
+                fill="none"
+                height="12"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <desc />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                />
+                <path
+                  d="M3 17h1m16 0h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7m-9.7 5.7a4 4 0 0 1 8 0"
+                />
+                <line
+                  x1="3"
+                  x2="21"
+                  y1="21"
+                  y2="21"
+                />
+                <path
+                  d="M12 9v-6l3 3m-6 0l3 -3"
+                />
+              </svg>
+              <div
+                class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+              />
+              <div
+                class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+              >
+                7:30 
+              </div>
+            </div>
+            <div
+              class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+            >
+              <svg
+                fill="none"
+                height="12"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="12"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <desc />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                  stroke="none"
+                />
+                <path
+                  d="M3 17h1m16 0h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7m-9.7 5.7a4 4 0 0 1 8 0"
+                />
+                <line
+                  x1="3"
+                  x2="21"
+                  y1="21"
+                  y2="21"
+                />
+                <path
+                  d="M12 3v6l3 -3m-6 0l3 3"
+                />
+              </svg>
+              <div
+                class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+              />
+              <div
+                class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+              >
+                6:30 
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-jSUZER sc-kDvujY dRMZHh gjtklp"
+          >
+            <div
+              class="sc-jSUZER sc-ipEyDJ dRMZHh lkGBNU"
+            >
+              <div
+                class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
+                  />
+                </svg>
+                <div
+                  class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+                />
+                <div
+                  class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+                >
+                  12:00 
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-jSUZER sc-csuSiG dRMZHh WiDAa"
+            >
+              20 
+              <div
+                class="sc-jSUZER sc-eDWCr dRMZHh iNKXDR"
+              >
+                °C
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-jSUZER sc-kDvujY dRMZHh gjtklp"
+          >
+            <div
+              class="sc-jSUZER sc-ipEyDJ dRMZHh lkGBNU"
+            >
+              <div
+                class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
+                  />
+                </svg>
+                <div
+                  class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+                />
+                <div
+                  class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+                >
+                  3:00 
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-jSUZER sc-csuSiG dRMZHh WiDAa"
+            >
+              22 
+              <div
+                class="sc-jSUZER sc-eDWCr dRMZHh iNKXDR"
+              >
+                °C
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-jSUZER sc-kDvujY dRMZHh gjtklp"
+          >
+            <div
+              class="sc-jSUZER sc-ipEyDJ dRMZHh lkGBNU"
+            >
+              <div
+                class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
+                  />
+                </svg>
+                <div
+                  class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+                />
+                <div
+                  class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+                >
+                  6:00 
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-jSUZER sc-csuSiG dRMZHh WiDAa"
+            >
+              10 
+              <div
+                class="sc-jSUZER sc-eDWCr dRMZHh iNKXDR"
+              >
+                °C
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-jSUZER sc-kDvujY dRMZHh gjtklp"
+          >
+            <div
+              class="sc-jSUZER sc-ipEyDJ dRMZHh lkGBNU"
+            >
+              <div
+                class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
+                  />
+                </svg>
+                <div
+                  class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+                />
+                <div
+                  class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+                >
+                  9:00 
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-jSUZER sc-csuSiG dRMZHh WiDAa"
+            >
+              20 
+              <div
+                class="sc-jSUZER sc-eDWCr dRMZHh iNKXDR"
+              >
+                °C
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-jSUZER sc-kDvujY dRMZHh gjtklp"
+          >
+            <div
+              class="sc-jSUZER sc-ipEyDJ dRMZHh lkGBNU"
+            >
+              <div
+                class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
+                  />
+                </svg>
+                <div
+                  class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+                />
+                <div
+                  class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+                >
+                  12:00 
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-jSUZER sc-csuSiG dRMZHh WiDAa"
+            >
+              20 
+              <div
+                class="sc-jSUZER sc-eDWCr dRMZHh iNKXDR"
+              >
+                °C
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-jSUZER sc-kDvujY dRMZHh gjtklp"
+          >
+            <div
+              class="sc-jSUZER sc-ipEyDJ dRMZHh lkGBNU"
+            >
+              <div
+                class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
+                  />
+                </svg>
+                <div
+                  class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+                />
+                <div
+                  class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+                >
+                  3:00 
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-jSUZER sc-csuSiG dRMZHh WiDAa"
+            >
+              22 
+              <div
+                class="sc-jSUZER sc-eDWCr dRMZHh iNKXDR"
+              >
+                °C
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-jSUZER sc-kDvujY dRMZHh gjtklp"
+          >
+            <div
+              class="sc-jSUZER sc-ipEyDJ dRMZHh lkGBNU"
+            >
+              <div
+                class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
+                  />
+                </svg>
+                <div
+                  class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+                />
+                <div
+                  class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+                >
+                  6:00 
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-jSUZER sc-csuSiG dRMZHh WiDAa"
+            >
+              10 
+              <div
+                class="sc-jSUZER sc-eDWCr dRMZHh iNKXDR"
+              >
+                °C
+              </div>
+            </div>
+          </div>
+          <div
+            class="sc-jSUZER sc-kDvujY dRMZHh gjtklp"
+          >
+            <div
+              class="sc-jSUZER sc-ipEyDJ dRMZHh lkGBNU"
+            >
+              <div
+                class="sc-jSUZER sc-iBYQkv dRMZHh iWNoEs"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"
+                  />
+                </svg>
+                <div
+                  class="sc-gKPRtg sc-jrcTuL cyMLoJ ckbNhy"
+                />
+                <div
+                  class="sc-jSUZER sc-ftTHYK dRMZHh fGCqEg"
+                >
+                  9:00 
+                </div>
+              </div>
+            </div>
+            <div
+              class="sc-jSUZER sc-csuSiG dRMZHh WiDAa"
+            >
+              20 
+              <div
+                class="sc-jSUZER sc-eDWCr dRMZHh iNKXDR"
+              >
+                °C
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

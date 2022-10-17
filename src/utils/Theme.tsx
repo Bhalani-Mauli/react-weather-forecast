@@ -17,9 +17,13 @@ const theme = {
     lightaqua1: "#78b4a6",
     cream: "#ececec",
     cream1: "#d5c8c8",
+    calmgreen: "#00B290",
+    calmgreen1: "#02b997",
   },
   fonts: ["Lucida Sans", "Lucida Sans Regular", "sans-serif", "Roboto"],
   fontSizes: {
+    xxSmall: "0.7em",
+    xSmall: "0.85em",
     small: "1em",
     medium: "2em",
     large: "3em",
