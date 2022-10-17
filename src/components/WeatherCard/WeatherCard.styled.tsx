@@ -1,13 +1,17 @@
 import styled from "styled-components";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FlxRow, FlxCol } from "../CommonStyles/commonStyles.styles";
+import devices from "@utils/media";
 
 export const Container = styled.div`
   margin-top: 15px;
-  max-width: 250px;
+  width: 100%;
   border-radius: 5px;
   background-color: ${(props) => props.theme.colors.calmgreen};
   color: ${(props) => props.theme.colors.darkblue};
+  @media ${devices.mobileL} {
+    max-width: 250px;
+  }
 `;
 
 export const CardBody = styled.div`
