@@ -4,14 +4,12 @@ import { FlxRow, FlxCol } from "../CommonStyles/commonStyles.styles";
 import devices from "@utils/media";
 
 export const Container = styled.div`
-  margin-top: 15px;
+  margin: 15px;
   width: 100%;
   border-radius: 5px;
   background-color: ${(props) => props.theme.colors.calmgreen};
   color: ${(props) => props.theme.colors.darkblue};
-  @media ${devices.mobileL} {
-    max-width: 250px;
-  }
+  flex: 1;
 `;
 
 export const CardBody = styled.div`
