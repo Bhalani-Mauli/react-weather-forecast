@@ -1,0 +1,118 @@
+{
+  "cityData": {
+    "coord": { "lat": 23.0333, "lon": 72.6167 },
+    "country": "IN",
+    "id": 1279233,
+    "name": "Ahmedabad",
+    "population": 3719710,
+    "sunrise": "06:36",
+    "sunset": "18:12",
+    "timezone": 19800
+  },
+  "weatherData": [
+    {
+      "calculatedData": {
+        "humdity": 68,
+        "pressure": 1012,
+        "temp": 23,
+        "windSpeed": 3
+      },
+      "date": "2022-10-16",
+      "hourly": [{ "temp": 23.02, "time": "21:00" }]
+    },
+    {
+      "calculatedData": {
+        "humdity": 40,
+        "pressure": 1012,
+        "temp": 28,
+        "windSpeed": 3
+      },
+      "date": "2022-10-17",
+      "hourly": [
+        { "temp": 22.97, "time": "00:00" },
+        { "temp": 24.32, "time": "03:00" },
+        { "temp": 31.19, "time": "06:00" },
+        { "temp": 33.37, "time": "09:00" },
+        { "temp": 30.8, "time": "12:00" },
+        { "temp": 27.68, "time": "15:00" },
+        { "temp": 25.96, "time": "18:00" },
+        { "temp": 24.59, "time": "21:00" }
+      ]
+    },
+    {
+      "calculatedData": {
+        "humdity": 34,
+        "pressure": 1010,
+        "temp": 28,
+        "windSpeed": 3
+      },
+      "date": "2022-10-18",
+      "hourly": [
+        { "temp": 23.28, "time": "00:00" },
+        { "temp": 25.68, "time": "03:00" },
+        { "temp": 31.95, "time": "06:00" },
+        { "temp": 34.01, "time": "09:00" },
+        { "temp": 31.52, "time": "12:00" },
+        { "temp": 28.08, "time": "15:00" },
+        { "temp": 26.13, "time": "18:00" },
+        { "temp": 24.58, "time": "21:00" }
+      ]
+    },
+    {
+      "calculatedData": {
+        "humdity": 34,
+        "pressure": 1010,
+        "temp": 28,
+        "windSpeed": 3
+      },
+      "date": "2022-10-19",
+      "hourly": [
+        { "temp": 23.02, "time": "00:00" },
+        { "temp": 25.33, "time": "03:00" },
+        { "temp": 31.78, "time": "06:00" },
+        { "temp": 34.23, "time": "09:00" },
+        { "temp": 31.34, "time": "12:00" },
+        { "temp": 27.51, "time": "15:00" },
+        { "temp": 26.08, "time": "18:00" },
+        { "temp": 24.45, "time": "21:00" }
+      ]
+    },
+    {
+      "calculatedData": {
+        "humdity": 37,
+        "pressure": 1010,
+        "temp": 28,
+        "windSpeed": 3
+      },
+      "date": "2022-10-20",
+      "hourly": [
+        { "temp": 23.34, "time": "00:00" },
+        { "temp": 25.39, "time": "03:00" },
+        { "temp": 31.31, "time": "06:00" },
+        { "temp": 33.83, "time": "09:00" },
+        { "temp": 31.75, "time": "12:00" },
+        { "temp": 28.52, "time": "15:00" },
+        { "temp": 26.4, "time": "18:00" },
+        { "temp": 24.26, "time": "21:00" }
+      ]
+    },
+    {
+      "calculatedData": {
+        "humdity": 43,
+        "pressure": 1012,
+        "temp": 29,
+        "windSpeed": 5
+      },
+      "date": "2022-10-21",
+      "hourly": [
+        { "temp": 23.41, "time": "00:00" },
+        { "temp": 26.26, "time": "03:00" },
+        { "temp": 31.85, "time": "06:00" },
+        { "temp": 34.05, "time": "09:00" },
+        { "temp": 31.84, "time": "12:00" },
+        { "temp": 28.66, "time": "15:00" },
+        { "temp": 27.77, "time": "18:00" }
+      ]
+    }
+  ]
+}

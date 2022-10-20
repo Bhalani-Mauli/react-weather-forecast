@@ -14,6 +14,7 @@ describe("weatherReducer", () => {
     };
     const newState = weatherReducer(undefined, actionPayload);
     const expectedOutput = {
+      ...initialState,
       weather: { data: { weatherData: true } },
       status: "success",
     };
@@ -27,6 +28,7 @@ describe("weatherReducer", () => {
     };
     const newState = weatherReducer(undefined, actionPayload);
     const expectedOutput = {
+      ...initialState,
       weather: null,
       status: "Api is invalid",
     };

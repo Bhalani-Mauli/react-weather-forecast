@@ -4,7 +4,7 @@ import { FlxCol, FlxRow } from "@components/CommonStyles/commonStyles.styles";
 interface PropTypes {
   children: React.ReactNode;
   name?: string;
-  text: string;
+  text: string | number;
   unit?: string;
 }
 

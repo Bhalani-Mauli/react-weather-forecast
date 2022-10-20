@@ -1,3 +1,6 @@
+/**
+ * We got this test setup file from React Testing library
+ */
 import React, { FC, ReactElement } from "react";
 import { render, RenderOptions } from "@testing-library/react";
 import Theme from "./Theme";

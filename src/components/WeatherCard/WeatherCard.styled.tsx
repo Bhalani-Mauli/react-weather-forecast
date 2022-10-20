@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FlxRow, FlxCol } from "../CommonStyles/commonStyles.styles";
-import devices from "@utils/media";
 
 export const Container = styled.div`
+  max-width: 300px;
   margin: 15px;
   width: 100%;
   border-radius: 5px;

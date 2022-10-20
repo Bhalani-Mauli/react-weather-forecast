@@ -10,7 +10,7 @@ interface PropTypes {
 }
 
 function SearchBar({ onSearchHandler }: PropTypes) {
-  const [searchInput, setSearchInput] = useState<string>("");
+  const [searchInput, setSearchInput] = useState<string>("Tunis");
   return (
     <FlxRow>
       <Container>

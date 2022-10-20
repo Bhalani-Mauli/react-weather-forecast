@@ -5,8 +5,11 @@ import Dashboard from "./Dashboard";
 import * as actions from "@redux/actions/weatherActions/weatherAction";
 
 const mapStateToProps = (state: any) => {
-  //TODO: update type when create types
-  return { weatherData: state.weather };
+  const { weather, current } = state.weather;
+  return {
+    weatherData: weather?.weatherData.slice(current, current + 3),
+    cityData: weather?.cityData,
+  };
 };
 const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators({ ...actions }, dispatch);

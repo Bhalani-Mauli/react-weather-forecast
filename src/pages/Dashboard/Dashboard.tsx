@@ -1,5 +1,6 @@
 import { FlxRow, SearchBar, WeatherCard } from "@components/index";
 import { Dispatch } from "redux";
+import { City, FilteredWeatherType } from "types/api";
 import {
   ContentWrapper,
   Title,
@@ -9,12 +10,17 @@ import {
   CardContainer,
 } from "./Dashboard.styles";
 
-interface Proptypes {
+export interface DashboardProptypes {
   getWeatherData: (city: string) => (dispatch: Dispatch) => Promise<void>;
-  onClick?: (e: React.MouseEvent<SVGElement>) => void;
+  weatherData?: FilteredWeatherType[];
+  cityData?: City;
 }
 
-function Dashboard({ getWeatherData, onClick }: Proptypes) {
+function Dashboard({
+  getWeatherData,
+  weatherData,
+  cityData,
+}: DashboardProptypes) {
   const onClickHandlerLeft = () => {
     return alert("click arrow left");
   };
@@ -22,26 +28,33 @@ function Dashboard({ getWeatherData, onClick }: Proptypes) {
   const onClickHandlerRight = () => {
     return alert("click arrow Right");
   };
+
   return (
     <Main>
       <ContentWrapper>
         <Title>React Weather App</Title>
         <SearchBar onSearchHandler={getWeatherData} />
-        <FlxRow>
-          <StyledArrowLeft
-            data-testid="left-arrow"
-            onClick={onClickHandlerLeft}
-          />
-          <CardContainer>
-            <WeatherCard />
-            <WeatherCard />
-            <WeatherCard />
-          </CardContainer>
-          <StyledArrowRight
-            data-testid="right-arrow"
-            onClick={onClickHandlerRight}
-          />
-        </FlxRow>
+        {weatherData && cityData && (
+          <FlxRow>
+            <StyledArrowLeft
+              data-testid="left-arrow"
+              onClick={onClickHandlerLeft}
+            />
+            <CardContainer>
+              {weatherData.map((weather, index) => (
+                <WeatherCard
+                  key={`weather-${index}-${weather?.date}`}
+                  weatherData={weather}
+                  cityData={cityData}
+                />
+              ))}
+            </CardContainer>
+            <StyledArrowRight
+              data-testid="right-arrow"
+              onClick={onClickHandlerRight}
+            />
+          </FlxRow>
+        )}
       </ContentWrapper>
     </Main>
   );

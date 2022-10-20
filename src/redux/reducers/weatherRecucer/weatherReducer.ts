@@ -10,6 +10,7 @@ export type InitialStateType = {
 export const initialState = {
   weather: null,
   status: null,
+  current: 0,
 };
 
 const weatherReducer = (

@@ -16,6 +16,7 @@ export const Main = styled.div`
 export const CardContainer = styled(FlxRow)`
   flex-wrap: wrap;
   width: 100%;
+  justify-content: center;
 `;
 
 export const ContentWrapper = styled.div`
