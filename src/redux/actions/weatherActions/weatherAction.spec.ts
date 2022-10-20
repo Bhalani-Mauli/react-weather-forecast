@@ -1,15 +1,13 @@
 import { types } from "@redux/types";
 import thunk, { ThunkDispatch } from "redux-thunk";
 import { AnyAction } from "redux";
-import configureMockStore, {
-  MockStoreCreator,
-  MockStoreEnhanced,
-} from "redux-mock-store";
+import configureMockStore, { MockStoreEnhanced } from "redux-mock-store";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 
-import { getWeatherData } from "./weatherAction";
+import { formatData, getWeatherData } from "./weatherAction";
 import mockWeatherData from "./mockData.json";
+import mockWeatherExpectedData from "./mockWeatherExpectedData.json";
 import { InitialStateType } from "@redux/reducers/weatherRecucer/weatherReducer";
 
 type DispatchExts = ThunkDispatch<InitialStateType, void, AnyAction>;
@@ -49,7 +47,7 @@ describe("weatherAction", () => {
     const expectedAction = [
       {
         type: types.GET_WEATHER_DATA,
-        payload: mockWeatherData,
+        payload: mockWeatherExpectedData,
       },
     ];
     expect(store.getActions()).toEqual(expectedAction);
@@ -64,5 +62,12 @@ describe("weatherAction", () => {
       },
     ];
     expect(store.getActions()).toEqual(expectedAction);
+  });
+});
+
+describe("weatherAction formatter", () => {
+  it("should return formatted data by calling formatData", () => {
+    const result = formatData(mockWeatherData);
+    expect(result).toEqual(mockWeatherExpectedData);
   });
 });
