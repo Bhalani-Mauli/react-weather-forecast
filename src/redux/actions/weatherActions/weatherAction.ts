@@ -44,8 +44,8 @@ const formatCityData = (city: City) => {
   const { sunrise, sunset, timezone } = city;
   return {
     ...city,
-    sunrise: unixTimeStampToTimeString(sunrise, timezone),
-    sunset: unixTimeStampToTimeString(sunset, timezone),
+    sunrise: unixTimeStampToTimeString(+sunrise, timezone),
+    sunset: unixTimeStampToTimeString(+sunset, timezone),
   };
 };
 

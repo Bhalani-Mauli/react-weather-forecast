@@ -56,8 +56,8 @@ export interface City {
   country: string;
   population: number;
   timezone: number;
-  sunrise: number;
-  sunset: number;
+  sunrise: number | string;
+  sunset: number | string;
 }
 
 export interface WeatherApi {
