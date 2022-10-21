@@ -19,6 +19,10 @@ const theme = {
     cream1: "#d5c8c8",
     calmgreen: "#00B290",
     calmgreen1: "#04d3ad",
+    darkred: "#f11919",
+    darkred1: "#f11919",
+    lightred: "#eb3c3c",
+    lightred1: "#ec2929",
   },
   fonts: ["Lucida Sans", "Lucida Sans Regular", "sans-serif", "Roboto"],
   fontSizes: {

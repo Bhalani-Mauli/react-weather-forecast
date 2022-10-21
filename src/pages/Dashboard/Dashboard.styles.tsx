@@ -29,6 +29,13 @@ export const ContentWrapper = styled.div`
   }
 `;
 
+export const ErrorMessage = styled.span`
+  color: ${(props) => props.theme.colors.darkred};
+  font-size: ${(props) => props.theme.fontSizes.xSmall};
+  margin: 10px 20px;
+  display: block;
+`;
+
 export const StyledArrowLeft = styled(FaAngleLeft)`
   width: 40px;
   height: 40px;

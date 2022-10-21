@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import moment from "moment";
 import { Dispatch } from "redux";
 
@@ -16,11 +16,22 @@ export const getWeatherData = (city: string) => async (dispatch: Dispatch) => {
       payload: formatData(res.data),
     });
   } catch (err) {
+    const errorMessage = getErrorMessageFromError(err);
+
     dispatch({
       type: types.GET_WEATHER_ERROR,
-      payload: "Something went wrong",
+      payload: errorMessage,
     });
   }
+};
+const getErrorMessageFromError = (err: Error | AxiosError | any) => {
+  let errorMessage = "";
+  if (err?.response && err.response?.status === 404) {
+    errorMessage = "City Not Found";
+  } else {
+    errorMessage = "Something went wrong";
+  }
+  return errorMessage;
 };
 
 export const handleNavigateNext = () => {

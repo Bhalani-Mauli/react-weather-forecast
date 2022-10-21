@@ -8,6 +8,7 @@ import {
   StyledArrowLeft,
   StyledArrowRight,
   CardContainer,
+  ErrorMessage,
 } from "./Dashboard.styles";
 
 export interface DashboardProptypes {
@@ -16,6 +17,7 @@ export interface DashboardProptypes {
   cityData?: City;
   handleNavigateNext: () => void;
   handleNavigatePrev: () => void;
+  errorMessage?: string;
 }
 
 function Dashboard({
@@ -24,12 +26,14 @@ function Dashboard({
   cityData,
   handleNavigateNext,
   handleNavigatePrev,
+  errorMessage,
 }: DashboardProptypes) {
   return (
     <Main>
       <ContentWrapper>
         <Title>React Weather App</Title>
         <SearchBar onSearchHandler={getWeatherData} />
+        {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
         {weatherData && cityData && (
           <FlxRow>
             <StyledArrowLeft

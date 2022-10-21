@@ -11,6 +11,7 @@ describe("Dashboard", () => {
       cityData: mockWeatherExpectedData.cityData,
       handleNavigateNext: jest.fn(),
       handleNavigatePrev: jest.fn(),
+      errorMessage: undefined,
     };
   });
 
@@ -42,5 +43,15 @@ describe("Dashboard", () => {
     fireEvent.click(rightArrow);
     expect(props.handleNavigateNext).toHaveBeenCalledTimes(1);
     expect(props.handleNavigatePrev).toHaveBeenCalledTimes(1);
+  });
+
+  it("should have error message on the screen", () => {
+    const newProps = {
+      ...props,
+      errorMessage: "Something went wrong",
+    };
+    const { getByText } = render(<Dashboard {...newProps} />);
+    const errorMessage = getByText("Something went wrong");
+    expect(errorMessage).toBeInTheDocument();
   });
 });

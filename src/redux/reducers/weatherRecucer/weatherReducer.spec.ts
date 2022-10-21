@@ -10,13 +10,12 @@ describe("weatherReducer", () => {
   it(`returns the weatherData when GET_WEATHER_DATA is being called with data'`, () => {
     const actionPayload = {
       type: types.GET_WEATHER_DATA,
-      payload: { data: { weatherData: true } },
+      payload: { data: { weatherData: {} } },
     };
     const newState = weatherReducer(undefined, actionPayload);
     const expectedOutput = {
       ...initialState,
-      weather: { data: { weatherData: true } },
-      status: "success",
+      weather: { data: { weatherData: {} } },
     };
     expect(newState).toEqual(expectedOutput);
   });
@@ -30,7 +29,7 @@ describe("weatherReducer", () => {
     const expectedOutput = {
       ...initialState,
       weather: null,
-      status: "Api is invalid",
+      errorMessage: "Api is invalid",
     };
     expect(newState).toEqual(expectedOutput);
   });

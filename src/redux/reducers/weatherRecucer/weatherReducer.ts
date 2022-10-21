@@ -10,7 +10,7 @@ export type InitialStateType = {
 
 export const initialState = {
   weather: null,
-  status: null,
+  errorMessage: null,
   current: 0,
 };
 
@@ -30,9 +30,12 @@ const weatherReducer = (
 ) => {
   switch (action.type) {
     case types.GET_WEATHER_DATA:
-      return { ...state, weather: action.payload, status: "success" };
+      return { ...state, weather: action.payload, errorMessage: null };
     case types.GET_WEATHER_ERROR:
-      return { ...state, status: action.payload };
+      return {
+        ...state,
+        errorMessage: action.payload,
+      };
     case types.CARD_NAVIGATE_NEXT:
       return { ...state, current: handleIncrement(state.current) };
     case types.CARD_NAVIGATE_PREV:

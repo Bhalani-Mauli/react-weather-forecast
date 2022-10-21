@@ -27,6 +27,8 @@ const weatherResponse = rest.get(
     const city = req.url.searchParams.get("q");
     if (city == "Berlin") {
       return res(ctx.json(mockWeatherData));
+    } else if (city == "PostDam") {
+      return res(ctx.status(500));
     } else {
       return res(ctx.status(404));
     }
@@ -61,6 +63,17 @@ describe("weatherAction with mock API", () => {
 
   it("getWeatherData: should dispatch error when API call fails", async () => {
     await store.dispatch(getWeatherData("Unknown"));
+    const expectedAction = [
+      {
+        type: types.GET_WEATHER_ERROR,
+        payload: "City Not Found",
+      },
+    ];
+    expect(store.getActions()).toEqual(expectedAction);
+  });
+
+  it("getWeatherData: should dispatch error when API call fails", async () => {
+    await store.dispatch(getWeatherData("PostDam"));
     const expectedAction = [
       {
         type: types.GET_WEATHER_ERROR,

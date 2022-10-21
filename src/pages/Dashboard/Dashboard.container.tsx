@@ -9,6 +9,7 @@ const mapStateToProps = (state: any) => {
   return {
     weatherData: weather?.weatherData.slice(current, current + 3),
     cityData: weather?.cityData,
+    errorMessage: state.weather.errorMessage,
   };
 };
 const mapDispatchToProps = (dispatch: Dispatch) =>
