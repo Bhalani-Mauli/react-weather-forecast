@@ -2,14 +2,21 @@ import styled from "styled-components";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FlxRow, FlxCol } from "../CommonStyles/commonStyles.styles";
 
-export const Container = styled.div`
+interface ContainerPropType {
+  isTodaysCard?: boolean;
+}
+
+export const Container = styled.div<ContainerPropType>`
   max-width: 300px;
   margin: 15px;
   width: 100%;
   border-radius: 5px;
-  background-color: ${(props) => props.theme.colors.calmgreen};
   color: ${(props) => props.theme.colors.darkblue};
   flex: 1;
+  background-color: ${(props) =>
+    props.isTodaysCard
+      ? props.theme.colors.calmgreen1
+      : props.theme.colors.calmgreen};
 `;
 
 export const CardBody = styled.div`

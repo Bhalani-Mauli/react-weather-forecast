@@ -18,7 +18,7 @@ const theme = {
     cream: "#ececec",
     cream1: "#d5c8c8",
     calmgreen: "#00B290",
-    calmgreen1: "#02b997",
+    calmgreen1: "#04d3ad",
   },
   fonts: ["Lucida Sans", "Lucida Sans Regular", "sans-serif", "Roboto"],
   fontSizes: {

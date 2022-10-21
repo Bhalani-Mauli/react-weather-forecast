@@ -5,7 +5,12 @@ import configureMockStore, { MockStoreEnhanced } from "redux-mock-store";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 
-import { formatData, getWeatherData } from "./weatherAction";
+import {
+  formatData,
+  getWeatherData,
+  handleNavigateNext,
+  handleNavigatePrev,
+} from "./weatherAction";
 import mockWeatherData from "./mockData.json";
 import mockWeatherExpectedData from "./mockWeatherExpectedData.json";
 import { InitialStateType } from "@redux/reducers/weatherRecucer/weatherReducer";
@@ -28,7 +33,7 @@ const weatherResponse = rest.get(
   }
 );
 
-describe("weatherAction", () => {
+describe("weatherAction with mock API", () => {
   let store: MockStoreEnhanced<InitialStateType, DispatchExts>;
   const server = setupServer(weatherResponse);
 
@@ -36,6 +41,7 @@ describe("weatherAction", () => {
     store = mockStore({
       weather: undefined,
       status: undefined,
+      current: 0,
     });
     server.listen();
   });
@@ -62,6 +68,27 @@ describe("weatherAction", () => {
       },
     ];
     expect(store.getActions()).toEqual(expectedAction);
+  });
+});
+
+describe("weatherAction withhout API", () => {
+  let store: MockStoreEnhanced<InitialStateType, DispatchExts>;
+
+  beforeEach(() => {
+    store = mockStore({
+      weather: undefined,
+      status: undefined,
+      current: 0,
+    });
+  });
+  it("should return correct type for handleNavigateNext", () => {
+    store.dispatch(handleNavigateNext());
+    expect(store.getActions()).toEqual([{ type: types.CARD_NAVIGATE_NEXT }]);
+  });
+
+  it("should return correct type for handleNavigateNext", () => {
+    store.dispatch(handleNavigatePrev());
+    expect(store.getActions()).toEqual([{ type: types.CARD_NAVIGATE_PREV }]);
   });
 });
 

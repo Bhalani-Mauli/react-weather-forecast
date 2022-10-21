@@ -3,7 +3,7 @@
 exports[`Weatherapp render the weather component  1`] = `
 <DocumentFragment>
   <div
-    class="sc-jrcTuL dUxqfp"
+    class="sc-jrcTuL fvckLV"
   >
     <div
       class="sc-kDvujY dXMnKB"
@@ -47,22 +47,6 @@ exports[`Weatherapp render the weather component  1`] = `
             °C
           </sup>
         </span>
-        <div
-          class="sc-bcXHqe sc-dkrFOg iueWEx enraLd"
-        >
-          <img
-            class="sc-fEXmlR doywYA"
-            src="http://openweathermap.org/img/wn/01n@2x.png"
-          />
-          <div
-            class="sc-gswNZR sc-jSUZER gQYmtx ckBsnF"
-          />
-          <div
-            class="sc-bcXHqe sc-hLBbgP iueWEx irXefn"
-          >
-            Cloudy 
-          </div>
-        </div>
       </div>
       <div
         class="sc-bcXHqe sc-bqWxrE iueWEx tGWlX"

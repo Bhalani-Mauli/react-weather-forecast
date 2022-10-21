@@ -14,21 +14,17 @@ export interface DashboardProptypes {
   getWeatherData: (city: string) => (dispatch: Dispatch) => Promise<void>;
   weatherData?: FilteredWeatherType[];
   cityData?: City;
+  handleNavigateNext: () => void;
+  handleNavigatePrev: () => void;
 }
 
 function Dashboard({
   getWeatherData,
   weatherData,
   cityData,
+  handleNavigateNext,
+  handleNavigatePrev,
 }: DashboardProptypes) {
-  const onClickHandlerLeft = () => {
-    return alert("click arrow left");
-  };
-
-  const onClickHandlerRight = () => {
-    return alert("click arrow Right");
-  };
-
   return (
     <Main>
       <ContentWrapper>
@@ -38,7 +34,7 @@ function Dashboard({
           <FlxRow>
             <StyledArrowLeft
               data-testid="left-arrow"
-              onClick={onClickHandlerLeft}
+              onClick={handleNavigatePrev}
             />
             <CardContainer>
               {weatherData.map((weather, index) => (
@@ -51,7 +47,7 @@ function Dashboard({
             </CardContainer>
             <StyledArrowRight
               data-testid="right-arrow"
-              onClick={onClickHandlerRight}
+              onClick={handleNavigateNext}
             />
           </FlxRow>
         )}

@@ -5,12 +5,23 @@ import { Action, ActionPayloadType } from "types/generic";
 export type InitialStateType = {
   weather?: WeatherApi;
   status?: string;
+  current: number;
 };
 
 export const initialState = {
   weather: null,
   status: null,
   current: 0,
+};
+
+const handleIncrement = (current: number) => {
+  if (current >= 2) return current;
+  return current + 2;
+};
+
+const handleDecrement = (current: number) => {
+  if (current <= 0) return current;
+  return current - 2;
 };
 
 const weatherReducer = (
@@ -22,6 +33,10 @@ const weatherReducer = (
       return { ...state, weather: action.payload, status: "success" };
     case types.GET_WEATHER_ERROR:
       return { ...state, status: action.payload };
+    case types.CARD_NAVIGATE_NEXT:
+      return { ...state, current: handleIncrement(state.current) };
+    case types.CARD_NAVIGATE_PREV:
+      return { ...state, current: handleDecrement(state.current) };
     default:
       return state;
   }

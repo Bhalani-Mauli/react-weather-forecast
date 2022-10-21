@@ -23,6 +23,18 @@ export const getWeatherData = (city: string) => async (dispatch: Dispatch) => {
   }
 };
 
+export const handleNavigateNext = () => {
+  return {
+    type: types.CARD_NAVIGATE_NEXT,
+  };
+};
+
+export const handleNavigatePrev = () => {
+  return {
+    type: types.CARD_NAVIGATE_PREV,
+  };
+};
+
 export const formatData = (data: WeatherApi) => {
   const filteredData = groupByDays(data);
 

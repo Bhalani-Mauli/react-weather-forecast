@@ -1,3 +1,4 @@
+import moment from "moment";
 import { FaTint, FaWind, FaRegClock } from "react-icons/fa";
 import { TbGauge, TbSunrise, TbSunset } from "react-icons/tb";
 import { City, FilteredWeatherType } from "types/api";
@@ -24,9 +25,9 @@ function WeatherCard({ weatherData, cityData }: PropTypes) {
   const { name, country, sunrise, sunset } = cityData;
   const { calculatedData, date, hourly } = weatherData;
   const { humdity, pressure, temp, windSpeed } = calculatedData;
-
+  const isTodaysCard = moment().isSame(date, "day");
   return (
-    <Container>
+    <Container isTodaysCard={isTodaysCard}>
       <CardBody>
         <CardHeader>
           <LocationIcon />
@@ -41,9 +42,6 @@ function WeatherCard({ weatherData, cityData }: PropTypes) {
             {temp}
             <Unit>°C</Unit>
           </Temprature>
-          <IconWithText text="Cloudy">
-            <ImgLogo src="http://openweathermap.org/img/wn/01n@2x.png" />
-          </IconWithText>
         </MainTemprature>
 
         <RowResultDataWrapper>

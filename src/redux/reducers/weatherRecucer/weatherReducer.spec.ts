@@ -34,4 +34,50 @@ describe("weatherReducer", () => {
     };
     expect(newState).toEqual(expectedOutput);
   });
+
+  it("should update current when we get CARD_NAVIGATE_NEXT", () => {
+    const newState = weatherReducer(undefined, {
+      type: types.CARD_NAVIGATE_NEXT,
+    });
+    const expectedOutput = {
+      ...initialState,
+      current: 2,
+    };
+    expect(newState).toEqual(expectedOutput);
+  });
+
+  it("should update current when we get CARD_NAVIGATE_PREV", () => {
+    const currentState = { ...initialState, current: 2 };
+    const newState = weatherReducer(currentState, {
+      type: types.CARD_NAVIGATE_PREV,
+    });
+    const expectedOutput = {
+      ...initialState,
+      current: 0,
+    };
+    expect(newState).toEqual(expectedOutput);
+  });
+
+  it("should not go nagative value when clicking on CARD_NAVIGATE_PREV", () => {
+    const newState = weatherReducer(undefined, {
+      type: types.CARD_NAVIGATE_PREV,
+    });
+    const expectedOutput = {
+      ...initialState,
+      current: 0,
+    };
+    expect(newState).toEqual(expectedOutput);
+  });
+
+  it("should not exceed 2 value when clicking on CARD_NAVIGATE_NEXT", () => {
+    const currentState = { ...initialState, current: 2 };
+    const newState = weatherReducer(currentState, {
+      type: types.CARD_NAVIGATE_NEXT,
+    });
+    const expectedOutput = {
+      ...initialState,
+      current: 2,
+    };
+    expect(newState).toEqual(expectedOutput);
+  });
 });
