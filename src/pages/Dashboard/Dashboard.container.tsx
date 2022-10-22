@@ -5,11 +5,18 @@ import Dashboard from "./Dashboard";
 import * as actions from "@redux/actions/weatherActions/weatherAction";
 
 const mapStateToProps = (state: any) => {
-  const { weather, current } = state.weather;
+  const { weather: weatherReducer } = state;
+  const { weather, current } = weatherReducer;
   return {
     weatherData: weather?.weatherData.slice(current, current + 3),
     cityData: weather?.cityData,
-    errorMessage: state.weather.errorMessage,
+    errorMessage: weatherReducer.errorMessage,
+    unit: weatherReducer.unit,
+    unitMap: weatherReducer.unitMap,
+    switchMap: {
+      metric: false,
+      imperial: true,
+    },
   };
 };
 const mapDispatchToProps = (dispatch: Dispatch) =>

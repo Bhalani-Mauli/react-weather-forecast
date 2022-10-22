@@ -1,16 +1,20 @@
-import { useState } from "react";
 import styled from "styled-components";
 
 import { FlxRow } from "..";
 import Button from "@components/Button/Button";
 import { Container, Input, StyledSearchIcon } from "./SearchBar.styles";
 
-interface PropTypes {
+export interface PropTypes {
   onSearchHandler: (city: string) => void;
+  searchInput: string;
+  setSearchInput: (val: string) => void;
 }
 
-function SearchBar({ onSearchHandler }: PropTypes) {
-  const [searchInput, setSearchInput] = useState<string>("Tunis");
+function SearchBar({
+  onSearchHandler,
+  searchInput,
+  setSearchInput,
+}: PropTypes) {
   return (
     <FlxRow>
       <Container>

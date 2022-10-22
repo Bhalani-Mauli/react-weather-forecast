@@ -14,14 +14,15 @@ import {
   MainTemprature,
   Temprature,
   Unit,
-  ImgLogo,
 } from "./WeatherCard.styled";
 
 interface PropTypes {
   weatherData: FilteredWeatherType;
   cityData: City;
+  tempUnit: string;
+  windUnit: string;
 }
-function WeatherCard({ weatherData, cityData }: PropTypes) {
+function WeatherCard({ weatherData, cityData, tempUnit, windUnit }: PropTypes) {
   const { name, country, sunrise, sunset } = cityData;
   const { calculatedData, date, hourly } = weatherData;
   const { humdity, pressure, temp, windSpeed } = calculatedData;
@@ -40,12 +41,12 @@ function WeatherCard({ weatherData, cityData }: PropTypes) {
         <MainTemprature>
           <Temprature>
             {temp}
-            <Unit>°C</Unit>
+            <Unit>{tempUnit}</Unit>
           </Temprature>
         </MainTemprature>
 
         <RowResultDataWrapper>
-          <IconWithText text={windSpeed} unit="km/h">
+          <IconWithText text={windSpeed} unit={windUnit}>
             <FaWind size={12} />
           </IconWithText>
           <IconWithText text={humdity} unit="%">
@@ -69,7 +70,7 @@ function WeatherCard({ weatherData, cityData }: PropTypes) {
           <WeatherDataField
             key={`${index}-${i.time}`}
             name={i.time}
-            unit="°C"
+            unit={tempUnit}
             value={i.temp.toFixed(0)}
           >
             <FaRegClock />

@@ -1,17 +1,21 @@
 import { types } from "@redux/types";
-import { WeatherApi } from "types/api";
 import { Action, ActionPayloadType } from "types/generic";
 
-export type InitialStateType = {
-  weather?: WeatherApi;
-  status?: string;
-  current: number;
-};
-
 export const initialState = {
-  weather: null,
-  errorMessage: null,
+  weather: undefined,
+  errorMessage: undefined,
   current: 0,
+  unit: "metric",
+  unitMap: {
+    imperial: {
+      tempUnit: "°F",
+      windUnit: "mph",
+    },
+    metric: {
+      tempUnit: "°C",
+      windUnit: "km/h",
+    },
+  },
 };
 
 const handleIncrement = (current: number) => {
@@ -40,6 +44,11 @@ const weatherReducer = (
       return { ...state, current: handleIncrement(state.current) };
     case types.CARD_NAVIGATE_PREV:
       return { ...state, current: handleDecrement(state.current) };
+    case types.CHANGE_UNIT:
+      return {
+        ...state,
+        unit: state.unit === "metric" ? "imperial" : "metric",
+      };
     default:
       return state;
   }

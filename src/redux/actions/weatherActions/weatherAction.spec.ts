@@ -6,6 +6,7 @@ import { rest } from "msw";
 import { setupServer } from "msw/node";
 
 import {
+  changeUnit,
   formatData,
   getWeatherData,
   handleNavigateNext,
@@ -13,11 +14,12 @@ import {
 } from "./weatherAction";
 import mockWeatherData from "./mockData.json";
 import mockWeatherExpectedData from "./mockWeatherExpectedData.json";
-import { InitialStateType } from "@redux/reducers/weatherRecucer/weatherReducer";
+import { initialState } from "@redux/reducers/weatherRecucer/weatherReducer";
+import { WeatherReducerType } from "types/app";
 
-type DispatchExts = ThunkDispatch<InitialStateType, void, AnyAction>;
+type DispatchExts = ThunkDispatch<WeatherReducerType, void, AnyAction>;
 const middlewares = [thunk];
-const mockStore = configureMockStore<InitialStateType, DispatchExts>(
+const mockStore = configureMockStore<WeatherReducerType, DispatchExts>(
   middlewares
 );
 
@@ -36,14 +38,12 @@ const weatherResponse = rest.get(
 );
 
 describe("weatherAction with mock API", () => {
-  let store: MockStoreEnhanced<InitialStateType, DispatchExts>;
+  let store: MockStoreEnhanced<WeatherReducerType, DispatchExts>;
   const server = setupServer(weatherResponse);
 
   beforeEach(() => {
     store = mockStore({
-      weather: undefined,
-      status: undefined,
-      current: 0,
+      weather: initialState,
     });
     server.listen();
   });
@@ -85,13 +85,11 @@ describe("weatherAction with mock API", () => {
 });
 
 describe("weatherAction withhout API", () => {
-  let store: MockStoreEnhanced<InitialStateType, DispatchExts>;
+  let store: MockStoreEnhanced<WeatherReducerType, DispatchExts>;
 
   beforeEach(() => {
     store = mockStore({
-      weather: undefined,
-      status: undefined,
-      current: 0,
+      weather: initialState,
     });
   });
   it("should return correct type for handleNavigateNext", () => {
@@ -102,6 +100,11 @@ describe("weatherAction withhout API", () => {
   it("should return correct type for handleNavigateNext", () => {
     store.dispatch(handleNavigatePrev());
     expect(store.getActions()).toEqual([{ type: types.CARD_NAVIGATE_PREV }]);
+  });
+
+  it("should return correct type for changeUnit", () => {
+    store.dispatch(changeUnit());
+    expect(store.getActions()).toEqual([{ type: types.CHANGE_UNIT }]);
   });
 });
 

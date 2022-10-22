@@ -4,35 +4,29 @@ import { Dispatch } from "redux";
 
 import { types } from "@redux/types";
 import { City, FilteredWeatherType, WeatherApi, WeatherList } from "types/api";
+import { WeatherReducerType } from "types/app";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-export const getWeatherData = (city: string) => async (dispatch: Dispatch) => {
-  const API = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`;
-  try {
-    const res = await axios.get<WeatherApi>(API);
-    dispatch({
-      type: types.GET_WEATHER_DATA,
-      payload: formatData(res.data),
-    });
-  } catch (err) {
-    const errorMessage = getErrorMessageFromError(err);
-
-    dispatch({
-      type: types.GET_WEATHER_ERROR,
-      payload: errorMessage,
-    });
-  }
-};
-const getErrorMessageFromError = (err: Error | AxiosError | any) => {
-  let errorMessage = "";
-  if (err?.response && err.response?.status === 404) {
-    errorMessage = "City Not Found";
-  } else {
-    errorMessage = "Something went wrong";
-  }
-  return errorMessage;
-};
+export const getWeatherData =
+  (city: string) =>
+  async (dispatch: Dispatch, getState: () => WeatherReducerType) => {
+    const { unit } = getState().weather;
+    const API = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${unit}&appid=${API_KEY}`;
+    try {
+      const res = await axios.get<WeatherApi>(API);
+      dispatch({
+        type: types.GET_WEATHER_DATA,
+        payload: formatData(res.data),
+      });
+    } catch (err) {
+      const errorMessage = getErrorMessageFromError(err);
+      dispatch({
+        type: types.GET_WEATHER_ERROR,
+        payload: errorMessage,
+      });
+    }
+  };
 
 export const handleNavigateNext = () => {
   return {
@@ -44,6 +38,22 @@ export const handleNavigatePrev = () => {
   return {
     type: types.CARD_NAVIGATE_PREV,
   };
+};
+
+export const changeUnit = () => {
+  return {
+    type: types.CHANGE_UNIT,
+  };
+};
+
+const getErrorMessageFromError = (err: Error | AxiosError | any) => {
+  let errorMessage = "";
+  if (err?.response && err.response?.status === 404) {
+    errorMessage = "City Not Found";
+  } else {
+    errorMessage = "Something went wrong";
+  }
+  return errorMessage;
 };
 
 export const formatData = (data: WeatherApi) => {

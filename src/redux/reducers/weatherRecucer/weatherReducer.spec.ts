@@ -16,6 +16,7 @@ describe("weatherReducer", () => {
     const expectedOutput = {
       ...initialState,
       weather: { data: { weatherData: {} } },
+      errorMessage: null,
     };
     expect(newState).toEqual(expectedOutput);
   });
@@ -28,7 +29,7 @@ describe("weatherReducer", () => {
     const newState = weatherReducer(undefined, actionPayload);
     const expectedOutput = {
       ...initialState,
-      weather: null,
+      weather: undefined,
       errorMessage: "Api is invalid",
     };
     expect(newState).toEqual(expectedOutput);
@@ -76,6 +77,27 @@ describe("weatherReducer", () => {
     const expectedOutput = {
       ...initialState,
       current: 2,
+    };
+    expect(newState).toEqual(expectedOutput);
+  });
+  it("should change unit when we receive CHANGE_UNIT", () => {
+    const newState = weatherReducer(undefined, {
+      type: types.CHANGE_UNIT,
+    });
+    const expectedOutput = {
+      ...initialState,
+      unit: "imperial",
+    };
+    expect(newState).toEqual(expectedOutput);
+  });
+  it("should change unit again when we receive CHANGE_UNIT", () => {
+    const currentState = { ...initialState, unit: "imperial" };
+    const newState = weatherReducer(currentState, {
+      type: types.CHANGE_UNIT,
+    });
+    const expectedOutput = {
+      ...initialState,
+      unit: "metric",
     };
     expect(newState).toEqual(expectedOutput);
   });

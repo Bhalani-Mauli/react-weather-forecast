@@ -6,9 +6,12 @@
 - For state management I will be using redux (with thunk)
 - For API calls I am using axios.
 - For Weather data I will be using `openweathermap`
+- Node version used while development -> `node v14.17.2`
 
 ## How to run ?
 
+- Create `.env` file on root
+- add openweathermap API key inside `.env` -> `REACT_APP_API_KEY=YOUR_API_KEY`
 - For building the app run -> `yarn build`
 - For running development build run `yarn start`
 - For testing you can run -> `yarn test`

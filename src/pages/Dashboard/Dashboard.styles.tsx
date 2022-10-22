@@ -1,6 +1,8 @@
+import Switch from "react-switch";
 import styled from "styled-components";
-import { devices } from "@utils/index";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+
+import { devices } from "@utils/index";
 import { FlxRow } from "@components/index";
 
 export const Title = styled.h1`
@@ -58,4 +60,19 @@ export const StyledArrowRight = styled(FaAngleRight)`
   @media ${devices.mobileL} {
     display: block;
   }
+`;
+
+export const TempUnitWrapper = styled.div`
+  position: absolute;
+  z-index: 10;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+`;
+
+export const StyledSwitch = styled(Switch)`
+  margin: 0 10px;
 `;

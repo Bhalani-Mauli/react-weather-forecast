@@ -3,7 +3,7 @@
 exports[`Weatherapp render the weather component  1`] = `
 <DocumentFragment>
   <div
-    class="sc-jrcTuL fvckLV"
+    class="sc-jrcTuL fOPKrO"
   >
     <div
       class="sc-kDvujY dXMnKB"
@@ -44,7 +44,7 @@ exports[`Weatherapp render the weather component  1`] = `
           <sup
             class="sc-hBxehG TwZeE"
           >
-            °C
+            C
           </sup>
         </span>
       </div>
@@ -293,7 +293,7 @@ exports[`Weatherapp render the weather component  1`] = `
           <div
             class="sc-bcXHqe sc-pyfCe iueWEx cbTTQz"
           >
-            °C
+            C
           </div>
         </div>
       </div>
