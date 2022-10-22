@@ -18,4 +18,6 @@
 
 ## How to deploy ?
 
-// TODO:
+- We have not created pipeline but we have surge command setup in package json.
+- Do `yarn build`
+- then run `yarn fire` to publish the application http://mauliweatherapp.surge.sh/
