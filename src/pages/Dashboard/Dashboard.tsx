@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Dispatch } from "redux";
 
 import useFirstRender from "@utils/useFirstRender";
-import { FlxRow, SearchBar, WeatherCard } from "@components/index";
+import { FlxRow, SearchBar, WeatherCard, Chart } from "@components/index";
 import { City, FilteredWeatherType } from "types/api";
 import {
   ContentWrapper,
@@ -15,7 +15,7 @@ import {
   TempUnitWrapper,
   StyledSwitch,
 } from "./Dashboard.styles";
-import { UnitMap, WeatherReducerType } from "types/app";
+import { ChartType, UnitMap, WeatherReducerType } from "types/app";
 
 export interface DashboardProptypes {
   getWeatherData: (
@@ -33,6 +33,7 @@ export interface DashboardProptypes {
   unit: "imperial" | "metric";
   unitMap: UnitMap;
   switchMap: Record<string, boolean>;
+  chartData: ChartType[];
 }
 
 function Dashboard({
@@ -46,8 +47,9 @@ function Dashboard({
   unit,
   unitMap,
   switchMap,
+  chartData,
 }: DashboardProptypes) {
-  const [searchInput, setSearchInput] = useState<string>("Tunis");
+  const [searchInput, setSearchInput] = useState<string>("Tunisia");
   const { tempUnit, windUnit } = unitMap[unit];
   useFirstRender(() => {
     if (cityData) {
@@ -101,6 +103,7 @@ function Dashboard({
             />
           </FlxRow>
         )}
+        {chartData && <Chart chartData={chartData} />}
       </ContentWrapper>
     </Main>
   );

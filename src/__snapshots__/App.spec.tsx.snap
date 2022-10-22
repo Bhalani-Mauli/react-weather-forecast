@@ -3,22 +3,22 @@
 exports[`App renders the component 1`] = `
 <DocumentFragment>
   <div
-    class="sc-fLcnxK hBZzsm"
+    class="sc-bBABsx kasRlS"
   >
     <div
-      class="sc-iveFHk dALxXB"
+      class="sc-cwSeag krRdFi"
     >
       <h1
-        class="sc-kgTSHT fhdxBo"
+        class="sc-fLcnxK dQGzaP"
       >
         React Weather App
       </h1>
       <div
-        class="sc-gikAfH kDbbII"
+        class="sc-ezOQGI haJpxd"
       >
         °C
         <div
-          class="sc-ezOQGI haksAP"
+          class="sc-bYMpWt eGEqRF"
           style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 10px; transition: opacity 0.25s; user-select: none;"
         >
           <div
@@ -63,7 +63,7 @@ exports[`App renders the component 1`] = `
             class="sc-hLBbgP kyKXyd"
             data-testid="search-bar"
             placeholder="search"
-            value="Tunis"
+            value="Tunisia"
           />
         </div>
         <button

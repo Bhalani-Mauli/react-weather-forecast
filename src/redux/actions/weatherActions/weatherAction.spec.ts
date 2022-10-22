@@ -24,7 +24,7 @@ const mockStore = configureMockStore<WeatherReducerType, DispatchExts>(
 );
 
 const weatherResponse = rest.get(
-  `http://api.openweathermap.org/data/2.5/forecast`,
+  `https://api.openweathermap.org/data/2.5/forecast`,
   (req, res, ctx) => {
     const city = req.url.searchParams.get("q");
     if (city == "Berlin") {

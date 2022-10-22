@@ -17,3 +17,7 @@ export type InitialStateType = {
 export interface WeatherReducerType {
   weather: InitialStateType;
 }
+export interface ChartType {
+  name: string;
+  temprature: number;
+}

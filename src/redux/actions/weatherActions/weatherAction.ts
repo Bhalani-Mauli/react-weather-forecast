@@ -12,7 +12,7 @@ export const getWeatherData =
   (city: string) =>
   async (dispatch: Dispatch, getState: () => WeatherReducerType) => {
     const { unit } = getState().weather;
-    const API = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${unit}&appid=${API_KEY}`;
+    const API = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=${unit}&appid=${API_KEY}`;
     try {
       const res = await axios.get<WeatherApi>(API);
       dispatch({
@@ -63,6 +63,7 @@ export const formatData = (data: WeatherApi) => {
     const weatherItems = filteredData[itemKey];
     const weatherDataPerDay: FilteredWeatherType = {
       calculatedData: { temp: 0, humdity: 0, pressure: 0, windSpeed: 0 },
+      date: "",
     };
     weatherDataPerDay.calculatedData = getAverage(weatherItems);
     weatherDataPerDay.hourly = getHourlyData(weatherItems);

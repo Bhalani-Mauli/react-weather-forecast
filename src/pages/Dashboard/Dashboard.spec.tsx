@@ -17,6 +17,16 @@ describe("Dashboard", () => {
       unit: "metric",
       unitMap: initialState.unitMap,
       switchMap: { imperial: false, metric: true },
+      chartData: [
+        {
+          temprature: 26,
+          name: "Day 22",
+        },
+        {
+          temprature: 25,
+          name: "Day 23",
+        },
+      ],
     };
   });
 

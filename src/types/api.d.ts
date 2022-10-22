@@ -81,5 +81,5 @@ interface HourlyWeatherType {
 export interface FilteredWeatherType {
   calculatedData: CalculatedDataType;
   hourly?: HourlyWeatherType[];
-  date?: string;
+  date: string;
 }
