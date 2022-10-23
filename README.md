@@ -12,6 +12,7 @@
 
 - Create `.env` file on root
 - add openweathermap API key inside `.env` -> `REACT_APP_API_KEY=YOUR_API_KEY`
+- Please use `nvm use` to pick the project node version.
 - For building the app run -> `yarn build`
 - For running development build run `yarn start`
 - For testing you can run -> `yarn test`
@@ -21,3 +22,13 @@
 - We have not created pipeline but we have surge command setup in package json.
 - Do `yarn build`
 - then run `yarn fire` to publish the application http://mauliweatherapp.surge.sh/
+
+## Technologies/Libraries used
+
+- React (TS)
+- Redux
+- Thunk
+- Styled-components
+- React Testing Library
+- MSW (Mock Service Worker)
+- ReCharts
