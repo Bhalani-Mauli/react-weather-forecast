@@ -35,4 +35,4 @@
 
 ## Screenshot
 
-![MauliWeatherApp](https://github.com/Bhalani-Mauli/react-weather-forecast/blob/master/public/MauliWeatherAppScreenshot.png)
+![MauliWeatherApp](https://github.com/Bhalani-Mauli/react-weather-forecast/blob/main/public/MauliWeatherAppScreenshot.png)
