@@ -32,3 +32,7 @@
 - React Testing Library
 - MSW (Mock Service Worker)
 - ReCharts
+
+## Screenshot
+
+![MauliWeatherApp](https://github.com/Bhalani-Mauli/react-weather-forecast/blob/master/public/MauliWeatherAppScreenshot.png)
