@@ -8,9 +8,9 @@ export interface UnitMap {
 }
 export type InitialStateType = {
   weather?: WeatherApi;
-  status?: string;
+  errorMessage?: string;
   current: number;
-  unit: string;
+  unit: "imperial" | "metric";
   unitMap: UnitMap;
 };
 

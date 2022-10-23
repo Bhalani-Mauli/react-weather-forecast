@@ -3,7 +3,7 @@ import moment from "moment";
 import { Dispatch } from "redux";
 
 import { types } from "@redux/types";
-import { City, FilteredWeatherType, WeatherApi, WeatherList } from "types/api";
+import { City, FilteredWeatherType, WeatherApi, WeatherItem } from "types/api";
 import { WeatherReducerType } from "types/app";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
@@ -88,7 +88,7 @@ const unixTimeStampToTimeString = (timeStamp: number, timezone: number) => {
   return dateTime.format("HH:mm");
 };
 
-const getHourlyData = (data: WeatherList[]) => {
+const getHourlyData = (data: WeatherItem[]) => {
   return data.map((i) => {
     const getDateRegex = /(\d\d?:\d\d)/i;
     const dateTime = i.dt_txt.match(getDateRegex)?.[0] as string;
@@ -97,7 +97,7 @@ const getHourlyData = (data: WeatherList[]) => {
 };
 
 const groupByDays = (data: WeatherApi) => {
-  const initiaValue: Record<string, WeatherList[]> = {};
+  const initiaValue: Record<string, WeatherItem[]> = {};
   return data.list.reduce((list, item) => {
     const forecastDate = item.dt_txt.substring(0, 10);
     list[forecastDate] = list[forecastDate] || [];
@@ -107,7 +107,7 @@ const groupByDays = (data: WeatherApi) => {
 };
 
 const getAverage = (
-  data: WeatherList[],
+  data: WeatherItem[],
   humidity: number[] = [],
   pressure: number[] = [],
   windSpeed: number[] = [],

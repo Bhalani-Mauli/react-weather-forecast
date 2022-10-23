@@ -31,7 +31,7 @@ export interface Sys {
   pod: string;
 }
 
-export interface WeatherList {
+export interface WeatherItem {
   [x: string]: any;
   dt: number;
   main: Main;
@@ -64,7 +64,7 @@ export interface WeatherApi {
   cod: string;
   message: number;
   cnt: number;
-  list: WeatherList[];
+  list: WeatherItem[];
   city: City;
 }
 

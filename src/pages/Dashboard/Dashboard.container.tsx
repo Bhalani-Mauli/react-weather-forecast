@@ -4,8 +4,9 @@ import { connect } from "react-redux";
 import Dashboard from "./Dashboard";
 import * as actions from "@redux/actions/weatherActions/weatherAction";
 import { FilteredWeatherType } from "types/api";
+import { WeatherReducerType } from "types/app";
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: WeatherReducerType) => {
   const { weather: weatherReducer } = state;
   const { weather, current } = weatherReducer;
   return {

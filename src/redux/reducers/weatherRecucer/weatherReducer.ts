@@ -1,7 +1,8 @@
 import { types } from "@redux/types";
+import { InitialStateType } from "types/app";
 import { Action, ActionPayloadType } from "types/generic";
 
-export const initialState = {
+export const initialState: InitialStateType = {
   weather: undefined,
   errorMessage: undefined,
   current: 0,

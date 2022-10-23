@@ -1,4 +1,5 @@
 import { types } from "@redux/types";
+import { InitialStateType } from "types/app";
 import weatherReducer, { initialState } from "./weatherReducer";
 
 describe("weatherReducer", () => {
@@ -91,7 +92,10 @@ describe("weatherReducer", () => {
     expect(newState).toEqual(expectedOutput);
   });
   it("should change unit again when we receive CHANGE_UNIT", () => {
-    const currentState = { ...initialState, unit: "imperial" };
+    const currentState = {
+      ...initialState,
+      unit: "imperial",
+    } as InitialStateType;
     const newState = weatherReducer(currentState, {
       type: types.CHANGE_UNIT,
     });
